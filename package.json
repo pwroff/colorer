@@ -2,7 +2,7 @@
   "name": "colorer",
   "version": "1.0.0",
   "description": "Color helper",
-  "main": "index.js",
+  "main": "./src/main.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha test/*.test.js --max-old-space-size=4096 --check-leaks"
   },
