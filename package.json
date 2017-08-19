@@ -1,7 +1,7 @@
 {
   "name": "colorer",
   "version": "1.0.0",
-  "description": "Color helper",
+  "description": "Simple and easy to use javascript color utility for modifying and mixin color",
   "main": "./src/main.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha test/*.test.js --max-old-space-size=4096 --check-leaks"

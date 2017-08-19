@@ -2,6 +2,10 @@
 
 Simple and easy to use javascript color utility for modifying and mixin color. Can be used with any existing colors or theme objects, e.g. `styled-components` theme.
 
+## Installation
+
+`npm i colorer --save`
+
 ## Usage
 
 ### Usage as a plain color
