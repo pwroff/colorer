@@ -1,0 +1,17 @@
+{
+  "name": "colorer",
+  "version": "1.0.0",
+  "description": "Color helper",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/*.test.js --max-old-space-size=4096 --check-leaks"
+  },
+  "keywords": [],
+  "author": "Leonid Lazaryev <leonidlazaryev@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/pwroff/colorer.git",
+  "devDependencies": {
+    "mocha": "^3.5.0",
+    "should": "^11.2.1"
+  }
+}
