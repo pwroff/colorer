@@ -63,10 +63,20 @@ class Colorer {
     return this.valueOf();
   }
 
+  alpha(num = 0) {
+    this.toRGB();
+    const nextA = num / 100;
+    let nextV = Math.max(0, this.value.a + nextA);
+    const nextVA = Math.min(1, nextV);
+    const ret = new Colorer(this.toString());
+    ret.value.a = nextVA;
+    return ret;
+  }
+
   light(num = 0) {
     this.toHSV();
     let nextL = num / 100;
-    let nextV = this.value.v + nextL;
+    let nextV = Math.max(0, this.value.v + nextL);
     this.value.v = Math.min(1, nextV);
     this.toRGB();
     const ret = new Colorer(this.toString());
@@ -79,7 +89,7 @@ class Colorer {
   depth(num = 0) {
     this.toHSV();
     let nextN = num / 100;
-    let nextV = this.value.s + nextN;
+    let nextV = Math.max(0, this.value.s + nextN);
     this.value.s = Math.min(1, nextV);
     this.toRGB();
     const ret = new Colorer(this.toString());
@@ -91,7 +101,8 @@ class Colorer {
 
   tone(deg = 0) {
     this.toHSV();
-    let nextH = this.value.h + (deg/100);
+    let degs = Math.max(deg, deg * -1);
+    let nextH = this.value.h + (degs / 100);
     this.value.h = nextH % 3.6;
     this.toRGB();
     const ret = new Colorer(this.toString());
@@ -159,7 +170,7 @@ class Colorer {
   }
 }
 
-if (window) {
+if (!global && window) {
   window.Colorer = Colorer;
 }
 
