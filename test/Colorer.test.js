@@ -51,4 +51,13 @@ describe("Colorer", () => {
     should.strictEqual(`${c.nested.primary}`, 'rgba(100,200,255,1)');
     done();
   });
+
+  it("should set proper values to color", (done) => {
+    const c = colorer('rgba(100,200,255,1)');
+    const ca = c.alpha(-50);
+
+    should.strictEqual(ca.value.a, 0.5);
+
+    done();
+  })
 });
