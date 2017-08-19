@@ -4,7 +4,7 @@ const webpack = require('webpack');
 module.exports = {
   entry: './src/main.js',
   output: {
-    filename: 'index.js',
+    filename: 'Colorer.js',
     path: resolve(__dirname, 'build/')
   },
   module: {

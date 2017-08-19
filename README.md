@@ -67,6 +67,16 @@ const Themed = ({children}) => (
 );
 
 ````
+### Usage in browser
+
+````javascript
+<script src='/path_to_colorer/build/Colorer.js' type='text/javascript'/>;
+
+<script type='text/javascript'>
+  var themedColor = new Colorer('#1199ee');
+  ...etc
+</script>
+````
 
 # License
 
