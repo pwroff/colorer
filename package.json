@@ -1,6 +1,6 @@
 {
   "name": "colorer",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Simple and easy to use javascript color utility for modifying and mixin color",
   "main": "./src/main.js",
   "scripts": {
