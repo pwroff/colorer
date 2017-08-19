@@ -159,6 +159,10 @@ class Colorer {
   }
 }
 
+if (window) {
+  window.Colorer = Colorer;
+}
+
 const checkKeys = (ob) => {
   Object.keys(ob).forEach((k) => {
     if (typeof ob[k] === 'object') {

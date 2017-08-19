@@ -4,16 +4,30 @@
   "description": "Simple and easy to use javascript color utility for modifying and mixin color",
   "main": "./src/main.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha test/*.test.js --max-old-space-size=4096 --check-leaks"
+    "test": "./node_modules/.bin/mocha test/*.test.js --max-old-space-size=4096 --check-leaks",
+    "build": "./node_modules/.bin/webpack -p"
   },
   "keywords": [
-    "colors", "color", "mixin", "color mixin", "color manipulation", "update color"
+    "colors",
+    "color",
+    "mixin",
+    "color mixin",
+    "color manipulation",
+    "update color",
+    "front end",
+    "frontend",
+    "theming"
   ],
   "author": "Leonid Lazaryev <leonidlazaryev@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/pwroff/colorer.git",
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-latest": "^6.24.1",
     "mocha": "^3.5.0",
-    "should": "^11.2.1"
+    "should": "^11.2.1",
+    "webpack": "^3.5.5"
   }
 }
