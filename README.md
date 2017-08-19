@@ -26,6 +26,10 @@ const darker = themedColor.light(-10); // 'rgba(230,184,46,1)'
 const saturated = themedColor.depth(10); // 'rgba(255,198,25,1)'
 const desaturated = themedColor.depth(-10); // 'rgba(255,210,76,1)'
 
+// Percentage from -100 to 100;
+// alpha(perc) - adds or subtracts curr alpha level;
+const withTransparency = themedColor.alpha(-50); // 'rgba(255,204,51,0.5)';
+
 // Degrees - 0 to 360;
 // tone(deg) - moves curr hue level;
 const changedColor = themedColor.tone(180); // 'rgba(255,51,143,1)'
@@ -77,6 +81,8 @@ const Themed = ({children}) => (
   ...etc
 </script>
 ````
+
+#### Calling mixin methods on colorer instance will always return new colorer instance with updated color.
 
 # License
 
