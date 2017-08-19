@@ -6,7 +6,9 @@
   "scripts": {
     "test": "./node_modules/.bin/mocha test/*.test.js --max-old-space-size=4096 --check-leaks"
   },
-  "keywords": [],
+  "keywords": [
+    "colors", "color", "mixin", "color mixin", "color manipulation", "update color"
+  ],
   "author": "Leonid Lazaryev <leonidlazaryev@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/pwroff/colorer.git",
