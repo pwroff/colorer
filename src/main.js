@@ -28,6 +28,7 @@ class Colorer {
     this.model = cs;
     this.value = this._setValue(color);
     this._initialColor = color;
+    this.toRGB();
   }
 
   get stringValue() {
@@ -161,7 +162,11 @@ class Colorer {
     for (let i = 0; i < cleared.length; i++) {
       const key = this.model[i] || 'a';
 
-      val[key] = parseInt(cleared[i].trim(), 10);
+      if (key === 'a') {
+        val[key] = parseFloat(cleared[i].trim());
+      } else {
+        val[key] = parseInt(cleared[i].trim(), 10);
+      }
     }
 
     val.a = val.a || 1;
