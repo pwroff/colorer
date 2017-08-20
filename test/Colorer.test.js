@@ -16,9 +16,9 @@ describe("Colorer", () => {
   it("should return propper color schema", (done) => {
     const colors = {
       hex: '#efefef',
-      rgb: 'rgb(0,0,0)',
-      hsv: 'hsv(0,0%,0%)',
-      hsl: 'hsl(0,0%,0%)'
+      rgba: 'rgb(0,0,0)',
+      hsva: 'hsv(0,0%,0%)',
+      hsla: 'hsl(0,0%,0%)'
     };
     checkCS(colors);
     done();

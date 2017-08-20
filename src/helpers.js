@@ -134,16 +134,16 @@ const helpers = {
             return 'hex';
         }
         if (/rgba/.test(color)){
-            return 'rgb';
+            return 'rgba';
         }
         if (/rgb/.test(color)) {
-            return 'rgb';
+            return 'rgba';
         }
         if (/hsv/.test(color)) {
-            return 'hsv';
+            return 'hsva';
         }
         if (/hsl/.test(color)) {
-            return 'hsl';
+            return 'hsla';
         }
     }
 }

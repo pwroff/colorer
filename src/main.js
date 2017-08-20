@@ -8,9 +8,9 @@ const {
   HSVtoRGB
 } = helpers;
 
-const RGB = 'rgb';
-const HSL = 'hsl';
-const HSV = 'hsv';
+const RGB = 'rgba';
+const HSL = 'hsla';
+const HSV = 'hsva';
 
 class Colorer {
   constructor(c) {
