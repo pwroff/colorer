@@ -170,10 +170,6 @@ class Colorer {
   }
 }
 
-if (!global && window) {
-  window.Colorer = Colorer;
-}
-
 const checkKeys = (ob) => {
   Object.keys(ob).forEach((k) => {
     if (typeof ob[k] === 'object') {
@@ -186,9 +182,13 @@ const checkKeys = (ob) => {
   return Object.assign({}, ob);
 }
 
-module.exports = (c) => {
+const exportDefault = function(c) {
   if (typeof c === 'object') {
     return checkKeys(c);
   }
   return new Colorer(c);
 };
+
+exportDefault.Colorer = Colorer;
+
+module.exports = exportDefault;
