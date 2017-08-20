@@ -65,7 +65,7 @@ class Colorer {
 
   alpha(num = 0) {
     this.toRGB();
-    const nextA = num / 100;
+    const nextA = parseFloat((num / 100).toFixed(2));
     let nextV = Math.max(0, this.value.a + nextA);
     const nextVA = Math.min(1, nextV);
     const ret = new Colorer(this.toString());
@@ -75,7 +75,7 @@ class Colorer {
 
   light(num = 0) {
     this.toHSV();
-    let nextL = num / 100;
+    let nextL = parseFloat((num / 100).toFixed(2));
     let nextV = Math.max(0, this.value.v + nextL);
     this.value.v = Math.min(1, nextV);
     this.toRGB();
@@ -88,7 +88,7 @@ class Colorer {
 
   depth(num = 0) {
     this.toHSV();
-    let nextN = num / 100;
+    let nextN = parseFloat((num / 100).toFixed(2));
     let nextV = Math.max(0, this.value.s + nextN);
     this.value.s = Math.min(1, nextV);
     this.toRGB();
@@ -103,7 +103,7 @@ class Colorer {
     this.toHSV();
     let degs = Math.max(deg, deg * -1);
     let nextH = this.value.h + (degs / 100);
-    this.value.h = nextH % 3.6;
+    this.value.h = parseFloat((nextH % 3.6).toFixed(2));
     this.toRGB();
     const ret = new Colorer(this.toString());
 
